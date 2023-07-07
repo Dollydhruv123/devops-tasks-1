@@ -20,7 +20,7 @@ node {
     sh 'ls ../' 
       }
   stage('Verify Apache server') {
-    sh 'cp /devops-tasks-1/demo.html /var/www/html/'
+    sh 'cp demo.html /var/www/html/'
       }
     }
   }
