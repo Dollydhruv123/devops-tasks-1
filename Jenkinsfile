@@ -15,7 +15,10 @@ node {
   stage('Verify Apache server') {
     sh 'service  apache2 status'
   }
-  
+   stage('Verify Apache server') {
+    sh 'ls -a'
+    sh 'ls ../' 
+      }
   stage('Verify Apache server') {
     sh 'cp /devops-tasks-1/demo.html /var/www/html/'
       }
