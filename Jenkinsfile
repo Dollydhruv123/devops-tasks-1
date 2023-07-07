@@ -9,11 +9,11 @@ node {
   }
   
   stage('Start Apache server') {
-    sh 'systemctl start apache2'
+    sh 'service apache2  start'
   }
   
   stage('Verify Apache server') {
-    sh 'systemctl status apache2'
+    sh 'service  apache2 status'
   }
   
   stage('Verify Apache server') {
