@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+   - name: "launch docker container"
+     docker_container:
+      name: "demo_jenkins2"
+      image: "{{ image_name }}"
+      state: started
+      ports: "8080:8080"
+      mounts: 
+       - source: /home/ws/data
+         target: /var/www/html
+       - source: /home/ws/jenkins_ws
+         target: /var/jenkins_home/
+
