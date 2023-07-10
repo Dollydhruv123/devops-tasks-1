@@ -11,16 +11,16 @@ node {
   stage('Start Apache server') {
     sh 'service apache2  start'
   }
+  stage('clone the code from repo') {
+    sh 'ls -la'
+    sh 'ls ../'
+  }
   
   stage('Verify Apache server') {
     sh 'service  apache2 status'
   }
   stage('clone the code from repo') {
     sh 'git clone  https://github.com/Dollydhruv123/devops-tasks-1.git'
-  }
-  stage('clone the code from repo') {
-    sh 'ls -la'
-    sh 'ls ../'
   }
   
   stage('Copy web pages to document root folder') {
