@@ -15,7 +15,12 @@ node {
   stage('Verify Apache server') {
     sh 'service  apache2 status'
   }
-  stage('Verify Apache server') {
+  stage('clone the code from repo') {
+    sh 'git clone  https://github.com/Dollydhruv123/devops-tasks-1.git'
+  }
+  
+  
+  stage('Copy web pages to document root folder') {
     sh 'cp demo.html /var/www/html/'
       }
     }
