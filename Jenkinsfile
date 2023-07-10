@@ -5,7 +5,7 @@ node {
     {
   stage('Install Apache server')
   {
-    sh 'apache -version'
+    sh 'apache2 -version'
   }
   
   stage('Start Apache server') {
