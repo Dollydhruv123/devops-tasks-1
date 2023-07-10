@@ -14,6 +14,7 @@ node {
   stage('clone the code from repo') {
     sh 'ls -la'
     sh 'ls ../'
+    sh 'rm -rf * '
   }
   
   stage('Verify Apache server') {
@@ -24,7 +25,7 @@ node {
   }
   
   stage('Copy web pages to document root folder') {
-    sh 'cp demo.html /var/www/html/'
+    sh 'cp -f devopsal1/dolly.html /var/www/html/'
       }
     }
   }
