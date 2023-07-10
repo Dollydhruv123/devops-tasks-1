@@ -20,7 +20,7 @@ node {
     sh 'service  apache2 status'
   }
   stage('clone the code from repo') {
-    sh 'git clone  https://github.com/Dollydhruv123/devops-tasks-1.git'
+    sh 'git clone  https://github.com/Dollydhruv123/devopsal1.git'
   }
   
   stage('Copy web pages to document root folder') {
